@@ -1,3 +1,31 @@
+
+# Project Writeup
+### Project overview
+The purpose of this project is to detect objects using the camera sensor in an urban environment. Using the Waymo Dataset, a convolutional neutal network was trained to detect objects of three classes (cars, cyclists, and pedesterians). An extensive data analysis was performed to explore the images in the dataset and a list of augmentations were chosen which were meaningful for the given dataset. Training process was monitored with Tensorboard and different hyperparameter were changed to improve the model's performance. 
+
+Object detection is one of the most important pre-requisites for autonomous systems. This task is what enables the controller in the vehicle to take obstacles into consideration while deciding on future trajectories. Obstacle location, type, and state are required for safe maneuvers of autonomous vehicles.
+
+
+### Set up
+The project was completed in the project workspace provided by Udacity. The project workspace already had necessary libraries and data for project completion. For local setup, please refer to the Local Setup subtopic below.
+
+### Dataset
+#### Dataset analysis
+The complete data analysis done for the dataset can be found in [Exploratory Data Analysis filled notebook] (/Exploratory Data Analysis_filled.ipynb). 
+
+
+#### Cross validation
+This section should detail the cross validation strategy and justify your approach.
+
+### Training
+#### Reference experiment
+This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
+
+#### Improve on the reference
+This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
+
+
+
 # Object Detection in an Urban Environment
 
 ## Data
@@ -137,24 +165,3 @@ Finally, you can create a video of your model's inferences for any tf record fil
 ```
 python inference_video.py --labelmap_path label_map.pbtxt --model_path experiments/reference/exported/saved_model --tf_record_path /data/waymo/testing/segment-12200383401366682847_2552_140_2572_140_with_camera_labels.tfrecord --config_path experiments/reference/pipeline_new.config --output_path animation.gif
 ```
-
-## Submission Template
-
-### Project overview
-This section should contain a brief description of the project and what we are trying to achieve. Why is object detection such an important component of self driving car systems?
-
-### Set up
-This section should contain a brief description of the steps to follow to run the code for this repository.
-
-### Dataset
-#### Dataset analysis
-This section should contain a quantitative and qualitative description of the dataset. It should include images, charts and other visualizations.
-#### Cross validation
-This section should detail the cross validation strategy and justify your approach.
-
-### Training
-#### Reference experiment
-This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
-
-#### Improve on the reference
-This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
