@@ -28,7 +28,7 @@ The workspace came with 90-10 split of training and validation data which was ke
 ### Training
 #### Reference experiment
 The reference experiment was run and it can be seen that the losses decrease with the number of epochs but the final total loss seemed to not reach a base plateau yet and is a relatively higher number. 
-![Reference Experiment](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/initial_losses.png/)
+![Reference Experiment](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/initial_training.png/)
 The precision and recall values after the evalution of the trained model is shown below:
 ![Reference Experiment](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/initial_stats.png/)
 As we can see the precision and recall values are very small which suggests that a model improvement is needed. We will experiment with different augmentations and learning rates to improve on the reference model.
