@@ -11,19 +11,30 @@ The project was completed in the project workspace provided by Udacity. The proj
 
 ### Dataset
 #### Dataset analysis
-The complete data analysis done for the dataset can be found in [Exploratory Data Analysis filled notebook] (./build/animation.gif).
+The complete data analysis done for the dataset can be found in Exploratory Data Analysis filled notebook. 
 
+First, the `display_instances` function was implemented which takes a batch of images from the dataset and displays the image with the associated bounding boxes. 10 different images were displayed at random using the `display_instances` function with the associated bounding boxes. While analyzing the different images, we can clearly see that the dataset consists of images with a good mix of weather and road conditions. While the majority of the objects in those images were of vehicles, pedesterians and cyclists were also seen which were shown in blue and green bounding boxes respectively.
+
+After taking a look at a few images from the dataset, I wanted to see the class distribution to see the proportion of objects represented of a certain class. A bach of 10000 random images from the dataset was taken to count the number of objects at each class. The analysis resulted in the following stats with around 77.7 % of the total objects being vehicles, 21.7 % being pedesterians, and 0.6 % being cyclists. 
+![Distribution Bar Chart] (image here)
+We can clearly see that vehicles are over represented while pedesterians and cyclists are under represented in the dataset. The dataset is collected in an urban setting which supports the fact that the number of vehicles are much more higher than pedesterians and cyclists. However, the proportion of cyclists represented in the data is very low.
+
+Since we are interested in object detection in this project, a batch of 5000 random images were taken to see the number of objects per image. While analyzing those 5000 images, it can be concluded from the figure below that the majority of images contained (5-50) objects with the maximum distribution between (12-18) images. This indicates the dataset is collected from areas with high vehicle traffic. 
+![Objects Bar Chart] (image here)
 
 #### Cross validation
-This section should detail the cross validation strategy and justify your approach.
+The workspace came with 90-10 split of training and validation data which was kept the same for this project after performing the exploratory data analysis. 
 
 ### Training
 #### Reference experiment
-This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
+The reference experiment was run and it can be seen that the losses decrease with the number of epochs but the final total loss seemed to not reach a base plateau yet and is a relatively higher number. 
+![Reference Experiment](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/results/initial_losses.png/).
+The precision and recall values after the evalution of the trained model is shown below:
+![Reference Experiment](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/results/initial_stats.png/)
+As we can see the precision and recall values are very small which suggests that a model improvement is needed. We will experiment with different augmentations and learning rates to improve on the reference model.
 
 #### Improve on the reference
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
-
 
 
 # Object Detection in an Urban Environment
