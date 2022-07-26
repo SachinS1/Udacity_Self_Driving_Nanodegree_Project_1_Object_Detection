@@ -29,12 +29,19 @@ The workspace came with 90-10 split of training and validation data which was ke
 #### Reference experiment
 The reference experiment was run and it can be seen that the losses decrease with the number of epochs but the final total loss seemed to not reach a base plateau yet and is a relatively higher number. 
 ![Reference Experiment](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/initial_training.png/)
+
 The precision and recall values after the evalution of the trained model is shown below:
 ![Reference Experiment](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/initial_stats.png/)
+
 As we can see the precision and recall values are very small which suggests that a model improvement is needed. We will experiment with different augmentations and learning rates to improve on the reference model.
 
 #### Improve on the reference
-This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
+To improve on the reference, several augmentations were identified from the [preprocessor.proto](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto) file to apply in the dataset to create the augmentations within the dataset.
+
+![Augmentation list](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/model_noise_1.png/)
+
+`random_rgb_to_gray`, `random_horizontal_flip`, `random_vertical_flip`, and `random_adjust_brightness` were implemented to introduce variations in the dataset. `random_black_patches`, `random_patch_gaussian`, and `random_jitter_boxes` were introduced to add noise to the dataset and mimic objects in rain, fog, occlusions, and other inclement weather conditions. 
+
 
 
 # Object Detection in an Urban Environment
