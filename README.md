@@ -11,7 +11,7 @@ The project was completed in the project workspace provided by Udacity. The proj
 
 ### Dataset
 #### Dataset analysis
-The complete data analysis done for the dataset can be found in [Exploratory Data Analysis filled notebook] (/Exploratory Data Analysis_filled.ipynb). 
+The complete data analysis done for the dataset can be found in [Exploratory Data Analysis filled notebook] (Exploratory Data Analysis_filled.ipynb). 
 
 
 #### Cross validation
