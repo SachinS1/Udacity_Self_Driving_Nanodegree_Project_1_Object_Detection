@@ -52,6 +52,11 @@ The precision and recall values did not seem to improve than the reference exper
 
 The second model was trained with an momentum optimizer (same as the reference experiment) with a constant learning rate of 0.005. The config file was modified so that the model would train for 10000 epochs and the batch size of 6 was kept. With storage issues in the Udacity workspace, I could only train the model for 1500 epochs but the losses seemed to have reached a plateau as seen in the figure below.
 
+![Loss Comparison](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/Loss_Comparison.png/)
+
+The second trained model (experiment 2) had the lowest overall loss and seemed to reach a plateau but the overall loss in the reference experiment and experiment 1 did not seem to have reached a base plateau yet. The second model could not be trained for than 1500 due to workspace issues but for immediate model improvement, we can try to train it for more epochs and compare the results. Nevertheless, the trained model at 1500 epochs had the best evaluation stats among the compared models too. 
+
+![Experiment 2 Stats](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/experiment_2_results_step_1500.png/)
 
 
 
