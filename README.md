@@ -45,7 +45,13 @@ To improve on the reference, several augmentations were identified from the [pre
 With the same augmentations, two different models were trained with different optimizer settings than the reference experiment. 
 
 The first model was trained with an adam optimizer with a constant learning rate of 0.0003. The model was trained for 2500 epochs similar to the reference experiment but the batch size was kept at 1. While evaluating the trained model and the precision and recall stats of the model can be seen below:
-![Experiment 1 Stats] (https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/experiment_1_stats.png)
+
+![Experiment 1 Stats](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/experiment_1_stats.png/)
+
+The precision and recall values did not seem to improve than the reference experiment which supports the fact that the model 1 results are not optimal.
+
+The second model was trained with an momentum optimizer (same as the reference experiment) with a constant learning rate of 0.005. The config file was modified so that the model would train for 10000 epochs and the batch size of 6 was kept. With storage issues in the Udacity workspace, I could only train the model for 1500 epochs but the losses seemed to have reached a plateau as seen in the figure below.
+
 
 
 
