@@ -42,6 +42,11 @@ To improve on the reference, several augmentations were identified from the [pre
 
 `random_rgb_to_gray`, `random_horizontal_flip`, `random_vertical_flip`, and `random_adjust_brightness` were implemented to introduce variations in the dataset. `random_black_patches`, `random_patch_gaussian`, and `random_jitter_boxes` were introduced to add noise to the dataset and mimic objects in rain, fog, occlusions, and other inclement weather conditions. 
 
+With the same augmentations, two different models were trained with different optimizer settings than the reference experiment. 
+
+The first model was trained with an adam optimizer with a constant learning rate of 0.0003. The model was trained for 2500 epochs similar to the reference experiment but the batch size was kept at 1. While evaluating the trained model and the precision and recall stats of the model can be seen below:
+![Experiment 1 Stats] (https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/experiment_1_stats.png)
+
 
 
 # Object Detection in an Urban Environment
