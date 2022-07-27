@@ -30,7 +30,7 @@ The workspace came with 90-10 split of training and validation data which was ke
 
 ### Training
 #### Reference experiment
-The reference experiment was run and it can be seen that the losses decrease with the number of epochs but the final total loss seemed to not reach a base plateau yet and is a relatively higher number. 
+The reference experiment was run for SSD Resnet 50 640x640 model which is a single shot detector described [here](https://arxiv.org/pdf/1512.02325.pdf). The reference experiment was run and it can be seen that the losses decrease with the number of epochs but the final total loss seemed to not reach a base plateau yet and is a relatively higher number. 
 
 ![Reference Experiment](https://github.com/SachinS1/Udacity_Self_Driving_Nanodegree_Project_1_Object_Detection/blob/main/results/initial_training.png/)
 
